@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1505593922 source:c:\users\mikem\documents\c++\a1 - simple calc\sample 1\main.cpp
+	<cstdlib>
+	<iostream>
+

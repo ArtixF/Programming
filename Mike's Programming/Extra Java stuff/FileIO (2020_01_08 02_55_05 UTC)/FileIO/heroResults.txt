@@ -1,0 +1,4 @@
+Hero[David, 89, (affliction - free!)]:false
+Hero[Robin, 60, (affliction - free!)]:false
+Hero[Buzz Lightyear, 105, (affliction - free!)]:false
+Hero[Jessie, 110, (affliction - free!)]:false

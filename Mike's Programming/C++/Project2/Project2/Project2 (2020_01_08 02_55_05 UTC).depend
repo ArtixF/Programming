@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1513144098 source:c:\users\mikem\documents\c++\project2\project2\main.cpp
+	<iostream>
+	"Game.h"
+
+1513145596 source:c:\users\mikem\documents\c++\project2\project2\src\board.cpp
+	"Board.h"
+	"iostream"
+
+1513144815 c:\users\mikem\documents\c++\project2\project2\include\board.h
+
+1513145620 source:c:\users\mikem\documents\c++\project2\project2\src\computerplayer.cpp
+	"ComputerPlayer.h"
+	"Player.h"
+	"Board.h"
+
+1513145707 c:\users\mikem\documents\c++\project2\project2\include\computerplayer.h
+	"Player.h"
+
+1513146066 c:\users\mikem\documents\c++\project2\project2\include\game.h
+	"Board.h"
+	"Player.h"
+	"HumanPlayer.h"
+	"ComputerPlayer.h"
+	"RandomPlayer.h"
+
+1513135541 c:\users\mikem\documents\c++\project2\project2\include\player.h
+	"string"
+	"Board.h"
+
+1513146182 source:c:\users\mikem\documents\c++\project2\project2\src\game.cpp
+	"Game.h"
+	"Board.h"
+	"Player.h"
+	"iostream"
+	"HumanPlayer.h"
+	"ComputerPlayer.h"
+	"RandomPlayer.h"
+
+1513120716 source:c:\users\mikem\documents\c++\project2\project2\src\humanplayer.cpp
+	"HumanPlayer.h"
+	"Player.h"
+	"iostream"
+
+1513120677 c:\users\mikem\documents\c++\project2\project2\include\humanplayer.h
+	"Player.h"
+
+1513135541 source:c:\users\mikem\documents\c++\project2\project2\src\player.cpp
+	"Player.h"
+	"Board.h"
+	"iostream"
+
+1513140075 source:c:\users\mikem\documents\c++\project2\project2\src\randomplayer.cpp
+	"RandomPlayer.h"
+	"cmath"
+
+1513134014 c:\users\mikem\documents\c++\project2\project2\include\randomplayer.h
+	"ComputerPlayer.h"
+

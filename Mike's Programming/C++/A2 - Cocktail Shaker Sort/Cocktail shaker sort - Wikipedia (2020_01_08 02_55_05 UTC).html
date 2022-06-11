@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://en.wikipedia.org/wiki/Cocktail_shaker_sort -->
+<html class="client-js ve-not-available" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Cocktail shaker sort - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cocktail_shaker_sort","wgTitle":"Cocktail shaker sort","wgCurRevisionId":800420791,"wgRevisionId":800420791,"wgArticleId":159482,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 German-language sources (de)","Pages using deprecated image syntax","Articles with example pseudocode","Sorting algorithms","Comparison sorts","Stable sorts"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Cocktail_shaker_sort","wgRelevantArticleId":159482,"wgRequestId":"WdOkuQpAEKkAACv-aEEAAAAQ","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q847294","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["ext.math.scripts","ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="./Cocktail shaker sort - Wikipedia_files/load.php">
+<script async="" src="./Cocktail shaker sort - Wikipedia_files/load(1).php"></script>
+<style>
+.cite-accessibility-label{ top:-99999px;clip:rect( 1px 1px 1px 1px ); clip:rect( 1px,1px,1px,1px ); position:absolute !important;padding:0 !important;border:0 !important;height:1px !important;width:1px !important; overflow:hidden}
+table.jquery-tablesorter th.headerSort{background-image:url(/w/resources/src/jquery/images/sort_both.png?8b01b);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 21 9%22 height=%229%22 width=%2221%22%3E%0A %3Cpath d=%22M14.5 5l-4 4-4-4zM14.5 4l-4-4-4 4z%22/%3E%0A%3C/svg%3E%0A");background-image:-o-linear-gradient(transparent,transparent),url(/w/resources/src/jquery/images/sort_both.png?8b01b);cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}table.jquery-tablesorter th.headerSortUp{background-image:url(/w/resources/src/jquery/images/sort_up.png?76242);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 21 4%22 height=%224%22 width=%2221%22%3E%0A %3Cpath d=%22M6.5 4l4-4 4 4z%22/%3E%0A%3C/svg%3E%0A");background-image:-o-linear-gradient(transparent,transparent),url(/w/resources/src/jquery/images/sort_up.png?76242)}table.jquery-tablesorter th.headerSortDown{background-image:url(/w/resources/src/jquery/images/sort_down.png?3f399);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 21 4%22 height=%224%22 width=%2221%22%3E%0A %3Cpath d=%22M14.5 0l-4 4-4-4z%22/%3E%0A%3C/svg%3E%0A");background-image:-o-linear-gradient(transparent,transparent),url(/w/resources/src/jquery/images/sort_down.png?3f399)}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	#toc.tochidden,.toc.tochidden,.toctoggle{display:none}}
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:24px;width:24px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/thumb/0/05/OOjs_UI_icon_advanced.svg/24px-OOjs_UI_icon_advanced.svg.png);background-image:linear-gradient(transparent,transparent),url(//upload.wikimedia.org/wikipedia/commons/0/05/OOjs_UI_icon_advanced.svg);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-ms-transition:opacity 0.15s;-o-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY( -20px )}100%{opacity:1;-webkit-transform:translateY( 0 )}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY( -20px )}100%{opacity:1;-moz-transform:translateY( 0 )}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY( -20px )}100%{opacity:1;-o-transform:translateY( 0 )}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY( -20px )}100%{opacity:1;transform:translateY( 0 )}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+.mw-ui-button{font-family:inherit;font-size:1em;display:inline-block;min-width:4em;max-width:28.75em;padding:0.546875em 1em;line-height:1.286;margin:0;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:none;*display:inline; zoom:1;vertical-align:middle;background-color:#f8f9fa;color:#222222;border:1px solid #a2a9b1;text-align:center;font-weight:bold;cursor:pointer}.mw-ui-button:visited{color:#222222}.mw-ui-button:hover{background-color:#ffffff;color:#444444;border-color:#a2a9b1}.mw-ui-button:focus{background-color:#ffffff;color:#222222;border-color:#3366cc;box-shadow:inset 0 0 0 1px #3366cc,inset 0 0 0 2px #ffffff}.mw-ui-button:active,.mw-ui-button.is-on,.mw-ui-button.mw-ui-checked{background-color:#d9d9d9;color:#000000;border-color:#72777d;box-shadow:none}.mw-ui-button:disabled{background-color:#c8ccd1;color:#fff;border-color:#c8ccd1}.mw-ui-button:disabled:hover,.mw-ui-button:disabled:active{background-color:#c8ccd1;color:#fff;box-shadow:none;border-color:#c8ccd1}.mw-ui-button:focus{outline-width:0}.mw-ui-button:focus::-moz-focus-inner{border-color:transparent;padding:0}.mw-ui-button:not( :disabled ){-webkit-transition:background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms;-moz-transition:background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms;transition:background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms}.mw-ui-button:disabled{text-shadow:none;cursor:default}.mw-ui-button.mw-ui-big{font-size:1.3em}.mw-ui-button.mw-ui-block{display:block;width:100%;margin-left:auto;margin-right:auto}.mw-ui-button.mw-ui-progressive{background-color:#3366cc;color:#fff;border:1px solid #3366cc;text-shadow:0 1px rgba(0,0,0,0.1)}.mw-ui-button.mw-ui-progressive:hover{background-color:#447ff5;border-color:#447ff5}.mw-ui-button.mw-ui-progressive:focus{box-shadow:inset 0 0 0 1px #3366cc,inset 0 0 0 2px #ffffff}.mw-ui-button.mw-ui-progressive:active,.mw-ui-button.mw-ui-progressive.is-on,.mw-ui-button.mw-ui-progressive.mw-ui-checked{background-color:#2a4b8d;border-color:#2a4b8d;box-shadow:none}.mw-ui-button.mw-ui-progressive:disabled{background-color:#c8ccd1;color:#fff;border-color:#c8ccd1}.mw-ui-button.mw-ui-progressive:disabled:hover,.mw-ui-button.mw-ui-progressive:disabled:active,.mw-ui-button.mw-ui-progressive:disabled.mw-ui-checked{background-color:#c8ccd1;color:#fff;border-color:#c8ccd1;box-shadow:none}.mw-ui-button.mw-ui-progressive.mw-ui-quiet{color:#222222}.mw-ui-button.mw-ui-progressive.mw-ui-quiet:hover{background-color:transparent;color:#447ff5}.mw-ui-button.mw-ui-progressive.mw-ui-quiet:active,.mw-ui-button.mw-ui-progressive.mw-ui-quiet.mw-ui-checked{color:#2a4b8d}.mw-ui-button.mw-ui-progressive.mw-ui-quiet:focus{background-color:transparent;color:#3366cc}.mw-ui-button.mw-ui-progressive.mw-ui-quiet:disabled{color:#c8ccd1}.mw-ui-button.mw-ui-destructive{background-color:#dd3333;color:#fff;border:1px solid #dd3333;text-shadow:0 1px rgba(0,0,0,0.1)}.mw-ui-button.mw-ui-destructive:hover{background-color:#ff4242;border-color:#ff4242}.mw-ui-button.mw-ui-destructive:focus{box-shadow:inset 0 0 0 1px #dd3333,inset 0 0 0 2px #ffffff}.mw-ui-button.mw-ui-destructive:active,.mw-ui-button.mw-ui-destructive.is-on,.mw-ui-button.mw-ui-destructive.mw-ui-checked{background-color:#b32424;border-color:#b32424;box-shadow:none}.mw-ui-button.mw-ui-destructive:disabled{background-color:#c8ccd1;color:#fff;border-color:#c8ccd1}.mw-ui-button.mw-ui-destructive:disabled:hover,.mw-ui-button.mw-ui-destructive:disabled:active,.mw-ui-button.mw-ui-destructive:disabled.mw-ui-checked{background-color:#c8ccd1;color:#fff;border-color:#c8ccd1;box-shadow:none}.mw-ui-button.mw-ui-destructive.mw-ui-quiet{color:#222222}.mw-ui-button.mw-ui-destructive.mw-ui-quiet:hover{background-color:transparent;color:#ff4242}.mw-ui-button.mw-ui-destructive.mw-ui-quiet:active,.mw-ui-button.mw-ui-destructive.mw-ui-quiet.mw-ui-checked{color:#b32424}.mw-ui-button.mw-ui-destructive.mw-ui-quiet:focus{background-color:transparent;color:#dd3333}.mw-ui-button.mw-ui-destructive.mw-ui-quiet:disabled{color:#c8ccd1}.mw-ui-button.mw-ui-quiet{background:transparent;border:0;text-shadow:none;color:#222222}.mw-ui-button.mw-ui-quiet:hover{background-color:transparent;color:#444444}.mw-ui-button.mw-ui-quiet:active,.mw-ui-button.mw-ui-quiet.mw-ui-checked{color:#000000}.mw-ui-button.mw-ui-quiet:focus{background-color:transparent;color:#222222}.mw-ui-button.mw-ui-quiet:disabled{color:#c8ccd1}.mw-ui-button.mw-ui-quiet:hover,.mw-ui-button.mw-ui-quiet:focus{box-shadow:none}.mw-ui-button.mw-ui-quiet:active,.mw-ui-button.mw-ui-quiet:disabled{background:transparent}input.mw-ui-button::-moz-focus-inner,button.mw-ui-button::-moz-focus-inner{margin-top:-1px;margin-bottom:-1px}a.mw-ui-button{text-decoration:none}a.mw-ui-button:hover,a.mw-ui-button:focus{text-decoration:none}.mw-ui-button-group > *{min-width:48px;border-radius:0;float:left}.mw-ui-button-group > *:first-child{border-top-left-radius:2px;border-bottom-left-radius:2px}.mw-ui-button-group > *:not( :first-child ){border-left:0}.mw-ui-button-group > *:last-child{border-top-right-radius:2px;border-bottom-right-radius:2px}.mw-ui-button-group .is-on .button{cursor:default}
+.mw-ui-icon{position:relative;line-height:1.5em;min-height:1.5em;min-width:1.5em}.mw-ui-icon.mw-ui-icon-element{text-indent:-999px;overflow:hidden;width:3.5em;min-width:3.5em;max-width:3.5em}.mw-ui-icon.mw-ui-icon-element:before{left:0;right:0;position:absolute;margin:0 1em}.mw-ui-icon.mw-ui-icon-element.mw-ui-icon-large{width:4.625em;min-width:4.625em;max-width:4.625em;line-height:4.625em;min-height:4.625em}.mw-ui-icon.mw-ui-icon-element.mw-ui-icon-large:before{min-height:4.625em}.mw-ui-icon.mw-ui-icon-before:before,.mw-ui-icon.mw-ui-icon-element:before{background-position:50% 50%;background-repeat:no-repeat;background-size:100% auto;float:left;display:block;min-height:1.5em;content:''}.mw-ui-icon.mw-ui-icon-before:before{position:relative;width:1.5em;margin-right:1em}.mw-ui-icon.mw-ui-icon-small:before{background-size:66.67% auto}
+.mw-notification-area{position:absolute}.mw-notification-area-floating{position:fixed}.mw-notification-area{top:0;right:0; padding:1em;width:20em;line-height:1.35;z-index:10000; overflow:hidden}.mw-notification{padding:0.25em 1em;margin-bottom:0.5em;border:solid 1px #ddd;background-color:#fcfcfc; cursor:pointer;opacity:0;-webkit-transform:translateX( 35px );transform:translateX( 35px );-webkit-transition:opacity 0.35s ease-in-out,-webkit-transform 0.35s ease-in-out;transition:opacity 0.35s ease-in-out,transform 0.35s ease-in-out}.mw-notification-visible{opacity:1;-webkit-transform:translateX( 0 );transform:translateX( 0 )}.mw-notification-replaced{opacity:0;-webkit-transform:translateY( -35px );transform:translateY( -35px );pointer-events:none}.mw-notification-title{font-weight:bold}.mw-notification-type-warn{border-color:#f5be00; background-color:#ffffe8}.mw-notification-type-error{border-color:#eb3941; background-color:#fff8f8} .mw-notification-area{font-size:0.8em}.mw-notification-area-layout{top:7em}.mw-notification{background-color:#fff;padding:0.75em 1.5em;border:1px solid #a2a9b1;border-radius:2px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.25)}.mw-notification-type-warn{border-color:#f5be00; }.mw-notification-type-error{border-color:#d33; }
+@media print {
+	.mw-notification-area{display:none}}
+.uls-menu{border-radius:2px; font-size:medium}.uls-search,.uls-language-settings-close-block{border-top-right-radius:2px;border-top-left-radius:2px}.uls-language-list{border-bottom-right-radius:2px;border-bottom-left-radius:2px}.uls-menu.callout:before,.uls-menu.callout:after{border-top:10px solid transparent;border-bottom:10px solid transparent;display:inline-block; top:17px;position:absolute;content:''}.uls-menu.callout.selector-right:before{ border-left:10px solid #c8ccd1; right:-11px}.uls-menu.callout.selector-right:after{ border-left:10px solid #f8f9fa; right:-10px}.uls-menu.callout.selector-left:before{ border-right:10px solid #c8ccd1; left:-11px}.uls-menu.callout.selector-left:after{ border-right:10px solid #f8f9fa; left:-10px}.uls-ui-languages button{margin:5px 15px 5px 0;white-space:nowrap;overflow:hidden}.uls-search-wrapper-wrapper{position:relative;padding-left:40px;margin-top:5px;margin-bottom:5px}.uls-icon-back{background:transparent url(/w/extensions/UniversalLanguageSelector/resources/images/back-grey-ltr.png?90e9b) no-repeat scroll center center;background-image:-webkit-linear-gradient(transparent,transparent),url(/w/extensions/UniversalLanguageSelector/resources/images/back-grey-ltr.svg?ae714);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22 standalone=%22no%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 id=%22Layer_1%22%3E%0A %3Cpath d=%22M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z%22 id=%22path3%22 fill=%22%23555%22/%3E%0A%3C/svg%3E%0A");background-size:28px;background-position:center center;height:32px;width:40px;display:block;position:absolute;left:0;border-right:1px solid #c8ccd1;opacity:0.8}.uls-icon-back:hover{opacity:1;cursor:pointer}  .skin-vector .uls-menu{border-color:#c8ccd1;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.25);box-shadow:0 2px 2px 0 rgba(0,0,0,0.25);font-size:0.875em}.skin-vector .uls-search{border-bottom-color:#c8ccd1}.skin-vector .uls-filtersuggestion{color:#72777d}
+@media print{#centralNotice{display:none}}.cn-closeButton{display:inline-block;zoom:1;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAACeklEQVR4Aa1UM3jkcRBN6qS//tTFttPHqmI359VZ5dm2L1zFtr02YlRx5sX2ft/7ed7O/w1M5ufnt8NZQjCBQXhG+IYZe5zjfju7xcHc3NzEzMwM6xOEqNnZ2ZeVlZW827dv1ycmJnbGx8d3Yr5582Z9eXk5D/d4h/empqYm+K0nw3yKcF4sFmdzOJzGgIAAhb29vc7Ozk6/Atrr/fz8lCwWq6m3tzcb72G3nmzFo/NNTU354eHhIltbW72Tk5M2IyND9P79+8ZPnz7VvXnzpoHBYPS4uLhobGxsDMHBwaLa2tp82MF+PVmUUqnMioiI6LOysjLQLCcPS2ZmZn7Ozc39oPtFYG80GgWpqakSS0tLY1hYmEgikWTBfoXsLD16BT3gUWhoqEKtVheREZ+Qu0IEjI+PZ2k0GqFer+cnJSWJra2tDWw2u2FqauoVeEAW3NzcnBcYGCh3dHTUtba2ltNjLvRJSEiQEQEPRENDQzkMBqPXwsKiXyqVFsFDNzc3LWmoqKmp4YIHZIyHDx9WOzg46GJiYmTk5e/h4eHstLQ0CX2ykXST4JPJ8y7sSVM5/QGMf9y4caMHf3r//v1a8IDsGRm04/D58+dtpNFPPNRqtflXrlzpI8G15IEGc2xsrFSlUglwD+Tk5NRBmuTk5A7wgOxbXFxcF8iysrIa1mskEolKvL29Ne7u7mpXV1dNaWlp9fr7X79+VYMMeQieY/dsv5p1r2g2Nja2vWZ7RXNiYuIA0dwlzwYGBjbkGXmURXeLeUa1ul2ebV8BEH+7CiAiASTYvgJ2qc3MzMzF2vz8+XPd27dvG5hMZg+CsV1tHmfXOP5+dqyddgHOI7v1srTdcwAAAABJRU5ErkJggg==);background:url(/w/extensions/CentralNotice/resources/subscribing/CloseWindow19x19.png?7596b)!ie;width:19px;height:19px;text-indent:19px;white-space:nowrap;overflow:hidden}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+.mw-mmv-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background-color:#000}body.mw-mmv-lightbox-open{overflow-y:auto;  }body.mw-mmv-lightbox-open #mw-page-base,body.mw-mmv-lightbox-open #mw-head-base,body.mw-mmv-lightbox-open #mw-navigation,body.mw-mmv-lightbox-open #content,body.mw-mmv-lightbox-open #footer,body.mw-mmv-lightbox-open #globalWrapper{ display:none}body.mw-mmv-lightbox-open > *{ display:none}body.mw-mmv-lightbox-open > .mw-mmv-overlay,body.mw-mmv-lightbox-open > .mw-mmv-wrapper{display:block}.mw-mmv-filepage-buttons{margin-top:5px}.mw-mmv-filepage-buttons .mw-mmv-view-expanded,.mw-mmv-filepage-buttons .mw-mmv-view-config{display:block;line-height:inherit}.mw-mmv-filepage-buttons .mw-mmv-view-expanded.mw-ui-icon:before{background-image:url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22 standalone=%22no%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1024 768%22%3E%0A %3Cg fill=%22%2372777d%22%3E%0A %3Cpath d=%22M851.2 71.6L690.7 232.1l-40.1-40.3-9.6 164.8 164.8-9.3-40.3-40.4L926 146.4l58.5 58.5L997.6 0 792.7 13.1%22/%3E%0A %3Cpath d=%22M769.6 89.3H611.9l70.9 70.8 7.9 7.5m-47.1 234.6l-51.2 3 3-51.2 9.4-164.4 5.8-100.3H26.4V768h883.1V387l-100.9 5.8-165 9.4zM813.9 678H113.6l207.2-270.2 31.5-12.9L548 599.8l105.9-63.2 159.8 140.8.2.6zm95.6-291.9V228l-79.1 78.9 7.8 7.9%22/%3E%0A %3C/g%3E%0A%3C/svg%3E%0A")}.mw-mmv-filepage-buttons .mw-mmv-view-config.mw-ui-icon:before{background-image:url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22UTF-8%22 standalone=%22no%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1024 768%22%3E%0A %3Cpath d=%22M897 454.6V313.4L810.4 299c-6.4-23.3-16-45.7-27.3-65.8l50.5-71.4-99.4-100.2-71.4 50.5c-20.9-11.2-42.5-20.9-65.8-27.3L582.6-1H441.4L427 85.6c-23.3 6.4-45.7 16-65.8 27.3l-71.4-50.5-100.3 99.5 50.5 71.4c-11.2 20.9-20.9 42.5-27.3 66.6L127 313.4v141.2l85.8 14.4c6.4 23.3 16 45.7 27.3 66.6L189.6 607l99.5 99.5 71.4-50.5c20.9 11.2 42.5 20.9 66.6 27.3l14.4 85.8h141.2l14.4-86.6c23.3-6.4 45.7-16 65.8-27.3l71.4 50.5 99.5-99.5-50.5-71.4c11.2-20.9 20.9-42.5 27.3-66.6l86.4-13.6zm-385 77c-81.8 0-147.6-66.6-147.6-147.6 0-81.8 66.6-147.6 147.6-147.6S659.6 302.2 659.6 384 593.8 531.6 512 531.6z%22 fill=%22%2372777d%22/%3E%0A%3C/svg%3E%0A");opacity:0.75}.mw-mmv-filepage-buttons .mw-mmv-view-config.mw-ui-icon:before:hover{opacity:1}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:14px;cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;line-height:1.35;opacity:1;-webkit-transition:opacity 250ms;-moz-transition:opacity 250ms;transition:opacity 250ms}.postedit:after{content:'';background:no-repeat center center;background-image:url(/w/resources/src/mediawiki.action/images/close.png?108ce);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22utf-8%22%3F%3E%0A%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%0A%09%3Cpath d=%22M3.636 2.222l14.142 14.142-1.414 1.414L2.222 3.636z%22/%3E%0A%09%3Cpath d=%22M17.778 3.636L3.636 17.778l-1.414-1.414L16.364 2.222z%22/%3E%0A%3C/svg%3E%0A");background-image:-o-linear-gradient(transparent,transparent),url(/w/resources/src/mediawiki.action/images/close.png?108ce);background-size:12px 12px;position:absolute;right:0.4em;top:0;bottom:0;min-width:32px;min-height:32px;opacity:0.87}.postedit:after:hover{opacity:1}.postedit.mw-notification{padding-right:3em}.postedit-faded{opacity:0}.postedit-icon{padding-left:25px; line-height:25px;background-repeat:no-repeat}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(/w/resources/src/mediawiki.action/images/green-checkmark.png?d94f1)!ie; background-position:left}
+#uls-settings-block{border-top:1px solid #c8ccd1;background-color:#f0f0f0;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fbfbfb),color-stop(100%,#f0f0f0));background-image:-webkit-linear-gradient(top,#fbfbfb 0,#f0f0f0 100%);background-image:-moz-linear-gradient(top,#fbfbfb 0,#f0f0f0 100%);background-image:linear-gradient(#fbfbfb 0,#f0f0f0 100%);padding-left:10px;line-height:1.2em;border-radius:0 0 2px 2px}#uls-settings-block div.display-settings-block,#uls-settings-block div.input-settings-block{display:inline-block;margin:8px 15px;color:#54595d}#uls-settings-block div.display-settings-block:hover,#uls-settings-block div.input-settings-block:hover{color:#222}</style><style>
+.ve-activated #toc,.ve-activated #siteNotice,.ve-activated .mw-indicators,.ve-activated #t-print,.ve-activated #t-permalink,.ve-activated #p-coll-print_export,.ve-activated #t-cite,.ve-deactivating .ve-ui-surface,.ve-active .ve-init-mw-desktopArticleTarget-editableContent{display:none} .ve-activating .ve-ui-surface{height:0;padding:0 !important; overflow:hidden} .ve-loading #content > :not( .ve-init-mw-desktopArticleTarget-loading-overlay ), .ve-activated .ve-init-mw-desktopArticleTarget-uneditableContent{ pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:0.5}.ve-activated #catlinks{cursor:pointer}.ve-activated #catlinks a{opacity:1} .ve-activated #content{position:relative} .ve-init-mw-desktopArticleTarget-loading-overlay{position:absolute;left:0;right:0;z-index:1;margin-top:-0.5em}.ve-init-mw-desktopArticleTarget-progress{height:1em;overflow:hidden;margin:0 25%}.ve-init-mw-desktopArticleTarget-progress-bar{height:1em;width:0} .mw-editsection{white-space:nowrap; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#54595d} .ve-init-mw-desktopArticleTarget-progress{height:0.75em;border:1px solid #36c;background:#fff;border-radius:2px;box-shadow:0 0.1em 0 0 rgba( 0,0,0,0.15 )}.ve-init-mw-desktopArticleTarget-progress-bar{height:0.75em;background:#36c}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Cocktail shaker sort - Wikipedia_files/load(2).php">
+<link rel="stylesheet" href="./Cocktail shaker sort - Wikipedia_files/load(3).php">
+<meta name="generator" content="MediaWiki 1.31.0-wmf.1">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif">
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Cocktail_shaker_sort">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit">
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit">
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort">
+<link rel="dns-prefetch" href="https://login.wikimedia.org/">
+<link rel="dns-prefetch" href="https://meta.wikimedia.org/">
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+<style type="text/css">.backpack.dropzone {
+  font-family: 'SF UI Display', 'Segoe UI';
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  font-weight: lighter;
+  color: white;
+  will-change: right;
+  z-index: 2147483647;
+  bottom: 20%;
+  background: #333;
+  position: fixed;
+  user-select: none;
+  transition: left .5s, right .5s;
+  right: 0px; }
+  .backpack.dropzone .animation {
+    height: 80px;
+    width: 250px;
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/hoverstate.png") left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style><script src="./Cocktail shaker sort - Wikipedia_files/load(4).php"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Cocktail_shaker_sort rootpage-Cocktail_shaker_sort vector-nav-directionality skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main"><div id="mw-notification-area" class="mw-notification-area mw-notification-area-floating" style="display: none;"></div>
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><div id="centralNotice" class="cn-WMCA_MCC_2017"><style type="text/css">
+
+#centralNotice.collapsed #WMCA_MCC_2017 {
+ display: none;
+}
+
+#WMCA_MCC_2017 {
+ position: relative;
+ overflow: hidden;
+ background: url(//upload.wikimedia.org/wikipedia/commons/0/0d/Gray-gradient1.png) bottom repeat-x;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#FFFFFF;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#WMCA_MCC_2017 a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#WMCA_MCC_2017-logo {
+ position: absolute;
+ top: 3px;
+ left: 15px;
+ background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Write.svg/60px-Write.svg.png);
+ height: 60px;
+ width: 60px;
+ background-repeat: no-repeat;
+}
+
+#WMCA_MCC_2017 #black-text {
+ font-size: 1em;
+ color: black;
+ font-weight:bold;
+ padding: 2em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+
+
+#WMCA_MCC_2017 div#cn-toggle-box {
+ position: absolute;
+ z-index: 98;
+ top: 2px;
+ right: 6px;
+}
+
+#WMCA_MCC_2017 div#cn-translation-link {
+ position:absolute;
+ z-index:50;
+ bottom: 2px;
+ right: 6px;
+ font-size: 0.7em;
+}
+
+#WMCA_MCC_2017 #calltoaction {
+ padding-top: 5px;
+ color: #0645ad;
+}
+
+</style>
+
+<div id="WMCA_MCC_2017">
+
+  <a class="cn-full-banner-click" href="https://en.wikipedia.org/wiki/Wikipedia:Contribution_Month_in_Canada_2017" title="Wikipedia:Contribution Month in Canada 2017">
+<div id="WMCA_MCC_2017-logo"></div>
+    <div id="black-text">Learn how to contribute to Wikipedia during Contribution Month in Canada</div>
+  </a>
+
+<div id="cn-toggle-box">
+  <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#" title="Fermer" onclick="hideBanner();return false;"><img border="0" src="./Cocktail shaker sort - Wikipedia_files/CloseWindow19x19.png" alt="Fermer"></a>  
+</div>
+</div></div><!-- CentralNotice --></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Cocktail shaker sort</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#mw-head">navigation</a>, 					<a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox" style="width:22em">
+<caption>Cocktail shaker sort</caption>
+<tbody><tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Sorting_shaker_sort_anim.gif" class="image" title="Visualization of shaker sort"><img alt="Visualization of shaker sort" src="./Cocktail shaker sort - Wikipedia_files/Sorting_shaker_sort_anim.gif" width="277" height="257" data-file-width="277" data-file-height="257"></a></td>
+</tr>
+<tr>
+<th scope="row">Class</th>
+<td><a href="https://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">Sorting algorithm</a></td>
+</tr>
+<tr>
+<th scope="row">Data structure</th>
+<td><a href="https://en.wikipedia.org/wiki/Array_data_structure" title="Array data structure">Array</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst-case performance</a></th>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n^{2})}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/6cd9594a16cb898b8f2a2dff9227a385ec183392" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.081ex; height:3.176ex;" alt="O(n^{2})"></span></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Best-case performance</a></th>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n)}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/34109fe397fdcff370079185bfdb65826cb5565a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.019ex; height:2.843ex;" alt="O(n)"></span></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Average performance</a></th>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n^{2})}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/6cd9594a16cb898b8f2a2dff9227a385ec183392" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.081ex; height:3.176ex;" alt="O(n^{2})"></span></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst-case space complexity</a></th>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(1)}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/e66384bc40452c5452f33563fe0e27e803b0cc21" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.787ex; height:2.843ex;" alt="O(1)"></span></td>
+</tr>
+</tbody></table>
+<p><b>Cocktail shaker sort</b>,<sup id="cite_ref-Knuth_1-0" class="reference"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_note-Knuth-1">[1]</a></sup> also known as <b>bidirectional bubble sort</b>,<sup id="cite_ref-2" class="reference"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_note-2">[2]</a></sup> <b>cocktail sort</b>, <b>shaker sort</b> (which can also refer to a variant of <a href="https://en.wikipedia.org/wiki/Selection_sort" title="Selection sort">selection sort</a>), <b>ripple sort</b>, <b>shuffle sort</b>,<sup id="cite_ref-Duhl1986_3-0" class="reference"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_note-Duhl1986-3">[3]</a></sup> or <b>shuttle sort</b>, is a variation of <a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">bubble sort</a> that is both a <a href="https://en.wikipedia.org/wiki/Stable_sort" class="mw-redirect" title="Stable sort">stable</a> <a href="https://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">sorting algorithm</a> and a <a href="https://en.wikipedia.org/wiki/Comparison_sort" title="Comparison sort">comparison sort</a>. The algorithm differs from a <a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">bubble sort</a> in that it sorts in both directions on each pass through the list. This sorting algorithm is only marginally more difficult to implement than a bubble sort, and solves the problem of <a href="https://en.wikipedia.org/wiki/Bubble_sort#Rabbits_and_turtles" title="Bubble sort">turtles</a> in bubble sorts. It provides only marginal performance improvements, and does not improve asymptotic performance; like the bubble sort, it is not of practical interest (<a href="https://en.wikipedia.org/wiki/Insertion_sort" title="Insertion sort">insertion sort</a> is preferred for simple sorts), though it finds some use in education.</p>
+<p></p>
+<div id="toc" class="toc">
+<div class="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#Pseudocode"><span class="tocnumber">1</span> <span class="toctext">Pseudocode</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#Differences_from_bubble_sort"><span class="tocnumber">2</span> <span class="toctext">Differences from bubble sort</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#Complexity"><span class="tocnumber">3</span> <span class="toctext">Complexity</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#Sources"><span class="tocnumber">5</span> <span class="toctext">Sources</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Pseudocode">Pseudocode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=1" title="Edit section: Pseudocode">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The simplest form goes through the whole list each time:</p>
+<pre><b>procedure</b> cocktailShakerSort( A <b>:</b> list of sortable items ) <b>defined as:</b>
+  <b>do</b>
+    swapped := false
+    <b>for each</b> i <b>in</b> 0 <b>to</b> length( A ) - 2 <b>do:</b>
+      <b>if</b> A[ i ] &gt; A[ i + 1 ] <b>then</b> <span style="color:green">// test whether the two elements are in the wrong order</span>
+        swap( A[ i ], A[ i + 1 ] ) <span style="color:green">// let the two elements change places</span>
+        swapped := true
+      <b>end if</b>
+    <b>end for</b>
+    <b>if not swapped then</b>
+      <span style="color:green">// we can exit the outer loop here if no swaps occurred.</span>
+      <b>break do-while loop</b>
+    <b>end if</b>
+    swapped := false
+    <b>for each</b> i <b>in</b> length( A ) - 2 <b>to</b> 0 <b>do:</b>
+      <b>if</b> A[ i ] &gt; A[ i + 1 ] <b>then</b>
+        swap( A[ i ], A[ i + 1 ] )
+        swapped := true
+      <b>end if</b>
+    <b>end for</b>
+  <b>while</b> swapped <span style="color:green">// if no elements have been swapped, then the list is sorted</span>
+<b>end procedure</b>
+</pre>
+<p>The first rightward pass will shift the largest element to its correct place at the end, and the following leftward pass will shift the smallest element to its correct place at the beginning. The second complete pass will shift the second largest and second smallest elements to their correct places, and so on. After <i>i</i> passes, the first <i>i</i> and the last <i>i</i> elements in the list are in their correct positions, and do not need to be checked. By shortening the part of the list that is sorted each time, the number of operations can be halved (see <a href="https://en.wikipedia.org/wiki/Bubble_sort#Alternative_implementations" title="Bubble sort">bubble sort</a>).</p>
+<p>This is an example of the algorithm in MATLAB/OCTAVE with the optimization of remembering the last swap index and updating the bounds.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="k">function</span><span class="w"> </span>A <span class="p">=</span><span class="w"> </span><span class="nf">cocktailShakerSort</span><span class="p">(</span>A<span class="p">)</span>
+<span class="c">% `beginIdx` and `endIdx` marks the first and last index to check</span>
+<span class="n">beginIdx</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">endIdx</span> <span class="p">=</span> <span class="nb">length</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="n">beginIdx</span> <span class="o">&lt;</span><span class="p">=</span> <span class="n">endIdx</span>
+    <span class="n">newBeginIdx</span> <span class="p">=</span> <span class="n">endIdx</span><span class="p">;</span>
+    <span class="n">newEndIdx</span> <span class="p">=</span> <span class="n">beginIdx</span><span class="p">;</span>
+    <span class="k">for</span> <span class="n">ii</span><span class="p">=</span> <span class="n">beginIdx</span><span class="p">:</span><span class="n">endIdx</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">[</span><span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">)]</span> <span class="p">=</span> <span class="n">deal</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+            <span class="n">swapped</span> <span class="p">=</span> <span class="n">true</span><span class="p">;</span>
+			<span class="n">newEndIdx</span><span class="p">=</span><span class="n">ii</span><span class="p">;</span>
+        <span class="k">end</span>
+
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="n">swapped</span> !<span class="p">=</span> <span class="n">false</span>    <span class="c">% if swapped equals to false, then the list is already been sorted</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="c">% decreases `endIdx` because the elements after `newEndIdx` are in correct order</span>
+    <span class="n">endIdx</span> <span class="p">=</span> <span class="n">newEndIdx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">swapped</span> <span class="p">=</span> <span class="n">true</span><span class="p">;</span>
+    <span class="k">for</span> <span class="n">ii</span><span class="p">=</span> <span class="n">endIdx</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">beginIdx</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">[</span><span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">)]</span> <span class="p">=</span> <span class="n">deal</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+            <span class="n">newBeginIdx</span> <span class="p">=</span> <span class="n">ii</span><span class="p">;</span>
+            <span class="n">swapped</span> <span class="p">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="n">swapped</span> !<span class="p">=</span> <span class="n">false</span>          <span class="c">% After finishing the above code, the list is being sorted</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="c">% increases `beginIdx` because the elements before `newBeginIdx` are in correct order</span>
+    <span class="n">beginIdx</span> <span class="p">=</span> <span class="n">newBeginIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="Differences_from_bubble_sort">Differences from bubble sort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=2" title="Edit section: Differences from bubble sort">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cocktail shaker sort is a slight variation of <a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">bubble sort</a>.<sup id="cite_ref-Knuth_1-1" class="reference"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_note-Knuth-1">[1]</a></sup> It differs in that instead of repeatedly passing through the list from bottom to top, it passes alternately from bottom to top and then from top to bottom. It can achieve slightly better performance than a standard bubble sort. The reason for this is that <a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">bubble sort</a> only passes through the list in one direction and therefore can only move items backward one step each iteration.</p>
+<p>An example of a list that proves this point is the list (2,3,4,5,1), which would only need to go through one pass of cocktail sort to become sorted, but if using an ascending <a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">bubble sort</a> would take four passes. However one cocktail sort pass should be counted as two bubble sort passes. Typically cocktail sort is less than two times faster than bubble sort.</p>
+<p>Another optimization can be that the algorithm remembers where the last actual swap has been done. In the next iteration, there will be no swaps beyond this limit and the algorithm has shorter passes. As the cocktail shaker sort goes bidirectionally, the range of possible swaps, which is the range to be tested, will reduce per pass, thus reducing the overall running time slightly.</p>
+<h2><span class="mw-headline" id="Complexity">Complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=3" title="Edit section: Complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The complexity of the cocktail shaker sort in <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">big O notation</a> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n^{2})}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/6cd9594a16cb898b8f2a2dff9227a385ec183392" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.081ex; height:3.176ex;" alt="O(n^{2})"></span> for both the worst case and the average case, but it becomes closer to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n)}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/34109fe397fdcff370079185bfdb65826cb5565a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.019ex; height:2.843ex;" alt="O(n)"></span> if the list is mostly ordered before applying the sorting algorithm. For example, if every element is at a position that differs by at most k (k ≥ 1) from the position it is going to end up in, the complexity of cocktail shaker sort becomes <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(kn).}</annotation>
+  </semantics>
+</math></span><img src="./Cocktail shaker sort - Wikipedia_files/5b19e9c84dbf4d3b63dd3b4de08ab1fb80a4cd8b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.898ex; height:2.843ex;" alt="{\displaystyle O(kn).}"></span></p>
+<p>The cocktail shaker sort is also briefly discussed in the book <i><a href="https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a></i>, along with similar refinements of bubble sort. In conclusion, Knuth states about bubble sort and its improvements:</p>
+<blockquote class="templatequote">
+<p>But none of these refinements leads to an algorithm better than straight insertion [that is, <a href="https://en.wikipedia.org/wiki/Insertion_sort" title="Insertion sort">insertion sort</a>]; and we already know that straight insertion isn't suitable for large&nbsp;<i>N</i>. [...] In short, the bubble sort seems to have nothing to recommend it, except a catchy name and the fact that it leads to some interesting theoretical problems.</p>
+<div class="templatequotecite">— <cite>D. E. Knuth<sup id="cite_ref-Knuth_1-2" class="reference"><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_note-Knuth-1">[1]</a></sup></cite></div>
+</blockquote>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap">
+<ol class="references">
+<li id="cite_note-Knuth-1"><span class="mw-cite-backlink">^ <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_ref-Knuth_1-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_ref-Knuth_1-1"><sup><i><b>b</b></i></sup></a> <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_ref-Knuth_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a href="https://en.wikipedia.org/wiki/Donald_Knuth" title="Donald Knuth">Knuth, Donald E.</a> (1973). "Sorting by Exchanging". <i>Art of Computer Programming</i>. 3. Sorting and Searching (1st ed.). <a href="https://en.wikipedia.org/wiki/Addison-Wesley" title="Addison-Wesley">Addison-Wesley</a>. pp.&nbsp;110–111. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-03803-X" title="Special:BookSources/0-201-03803-X">0-201-03803-X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACocktail+shaker+sort&amp;rft.atitle=Sorting+by+Exchanging&amp;rft.aufirst=Donald+E.&amp;rft.aulast=Knuth&amp;rft.btitle=Art+of+Computer+Programming&amp;rft.date=1973&amp;rft.edition=1st&amp;rft.genre=bookitem&amp;rft.isbn=0-201-03803-X&amp;rft.pages=110-111&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_ref-2"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><cite class="citation book">Black, Paul E.; Bockholt, Bob (24 August 2009). "bidirectional bubble sort". In Black, Paul E. <a rel="nofollow" class="external text" href="http://xlinux.nist.gov/dads/HTML/bidirectionalBubbleSort.html"><i>Dictionary of Algorithms and Data Structures</i></a>. <a href="https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a><span class="reference-accessdate">. Retrieved <span class="nowrap">5 February</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACocktail+shaker+sort&amp;rft.atitle=bidirectional+bubble+sort&amp;rft.au=Bockholt%2C+Bob&amp;rft.aufirst=Paul+E.&amp;rft.aulast=Black&amp;rft.btitle=Dictionary+of+Algorithms+and+Data+Structures&amp;rft.date=2009-08-24&amp;rft.genre=bookitem&amp;rft.pub=National+Institute+of+Standards+and+Technology&amp;rft_id=http%3A%2F%2Fxlinux.nist.gov%2Fdads%2FHTML%2FbidirectionalBubbleSort.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Duhl1986-3"><span class="mw-cite-backlink"><b><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#cite_ref-Duhl1986_3-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><cite class="citation book">Duhl, Martin (1986). "Die schrittweise Entwicklung und Beschreibung einer Shuffle-Sort-Array Schaltung". <i>HYPERKARL aus der Algorithmischen Darstellung des BUBBLE-SORT-ALGORITHMUS</i>. <i>Projektarbeit</i> (in German). Technical University of Kaiserslautern.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACocktail+shaker+sort&amp;rft.atitle=Die+schrittweise+Entwicklung+und+Beschreibung+einer+Shuffle-Sort-Array+Schaltung&amp;rft.aufirst=Martin&amp;rft.aulast=Duhl&amp;rft.btitle=HYPERKARL+aus+der+Algorithmischen+Darstellung+des+BUBBLE-SORT-ALGORITHMUS&amp;rft.date=1986&amp;rft.genre=bookitem&amp;rft.pub=Technical+University+of+Kaiserslautern&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=5" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation journal">Hartenstein, R. (July 2010). <a rel="nofollow" class="external text" href="http://www.inf.pucminas.br/sbc2010/anais/pdf/semish/st03_02.pdf">"A new World Model of Computing"</a> <span style="font-size:85%;">(PDF)</span>. <i>THE GRAND CHALLENGE TO REINVENT COMPUTING</i>. <a href="https://en.wikipedia.org/wiki/Belo_Horizonte" title="Belo Horizonte">Belo Horizonte</a>, Brazil: CSBC.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACocktail+shaker+sort&amp;rft.atitle=A+new+World+Model+of+Computing&amp;rft.aufirst=R.&amp;rft.aulast=Hartenstein&amp;rft.date=2010-07&amp;rft.genre=article&amp;rft.jtitle=THE+GRAND+CHALLENGE+TO+REINVENT+COMPUTING&amp;rft_id=http%3A%2F%2Fwww.inf.pucminas.br%2Fsbc2010%2Fanais%2Fpdf%2Fsemish%2Fst03_02.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="./Cocktail shaker sort - Wikipedia_files/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400"></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/Algorithm_implementation" class="extiw" title="wikibooks:Algorithm implementation">Algorithm implementation</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Algorithm_implementation/Sorting/Cocktail_sort" class="extiw" title="wikibooks:Algorithm implementation/Sorting/Cocktail sort">Cocktail sort</a></b></i></td>
+</tr>
+</tbody></table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.hermann-gruber.com/lehre/sorting/Shaker/Shaker-en.html">Interactive demo of cocktail sort</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.ubc.ca/~harrison/Java/sorting-demo.html">Java source code and an animated demo of cocktail sort (called bi-directional bubble sort) and several other algorithms</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sharpdeveloper.net/content/archive/2007/08/14/dot-net-data-structures-and-algorithms.aspx">.NET Implementation of cocktail sort and several other algorithms</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Sorting_algorithms" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit" id="collapsibleTable0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a id="collapseButton0" href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort#">hide</a>]</span>
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Sorting" title="Template:Sorting"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Sorting" title="Template talk:Sorting"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Sorting&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Sorting_algorithms" style="font-size:114%;margin:0 4em"><a href="https://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">Sorting algorithms</a></div>
+</th>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Theory</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computational_complexity_theory" title="Computational complexity theory">Computational complexity theory</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">Big O notation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Total_order" title="Total order">Total order</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">Lists</a></li>
+<li><a href="https://en.wikipedia.org/wiki/In-place_algorithm" title="In-place algorithm">Inplacement</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability" title="Sorting algorithm">Stability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_sort" title="Comparison sort">Comparison sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Adaptive_sort" title="Adaptive sort">Adaptive sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sorting_network" title="Sorting network">Sorting network</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Integer_sorting" title="Integer sorting">Integer sorting</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X_%2B_Y_sorting" title="X + Y sorting">X + Y sorting</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transdichotomous_model" title="Transdichotomous model">Transdichotomous model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quantum_sort" title="Quantum sort">Quantum sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Exchange sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">Bubble sort</a></li>
+<li><a class="mw-selflink selflink">Cocktail shaker sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort" title="Odd–even sort">Odd–even sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comb_sort" title="Comb sort">Comb sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gnome_sort" title="Gnome sort">Gnome sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quicksort" title="Quicksort">Quicksort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Slowsort" title="Slowsort">Slowsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stooge_sort" title="Stooge sort">Stooge sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bogosort" title="Bogosort">Bogosort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="https://en.wikipedia.org/wiki/Selection_algorithm" title="Selection algorithm">Selection sorts</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Selection_sort" title="Selection sort">Selection sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Heapsort" title="Heapsort">Heapsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Smoothsort" title="Smoothsort">Smoothsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cartesian_tree#Application_in_sorting" title="Cartesian tree">Cartesian tree sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tournament_sort" title="Tournament sort">Tournament sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cycle_sort" title="Cycle sort">Cycle sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Weak_heap#Weak-heap_sort" title="Weak heap">Weak-heap sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Insertion sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Insertion_sort" title="Insertion sort">Insertion sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shellsort" title="Shellsort">Shellsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Splaysort" title="Splaysort">Splaysort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tree_sort" title="Tree sort">Tree sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Library_sort" title="Library sort">Library sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Patience_sorting" title="Patience sorting">Patience sorting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Merge sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Merge_sort" title="Merge sort">Merge sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cascade_merge_sort" title="Cascade merge sort">Cascade merge sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oscillating_merge_sort" title="Oscillating merge sort">Oscillating merge sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Polyphase_merge_sort" title="Polyphase merge sort">Polyphase merge sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Distribution sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/American_flag_sort" title="American flag sort">American flag sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bead_sort" title="Bead sort">Bead sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bucket_sort" title="Bucket sort">Bucket sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Burstsort" title="Burstsort">Burstsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Counting_sort" title="Counting sort">Counting sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pigeonhole_sort" title="Pigeonhole sort">Pigeonhole sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Proxmap_sort" title="Proxmap sort">Proxmap sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Radix_sort" title="Radix sort">Radix sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Flashsort" title="Flashsort">Flashsort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Concurrent sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bitonic_sorter" title="Bitonic sorter">Bitonic sorter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Batcher_odd%E2%80%93even_mergesort" title="Batcher odd–even mergesort">Batcher odd–even mergesort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pairwise_sorting_network" title="Pairwise sorting network">Pairwise sorting network</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="https://en.wikipedia.org/wiki/Hybrid_algorithm" title="Hybrid algorithm">Hybrid sorts</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Block_sort" title="Block sort">Block merge sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Timsort" title="Timsort">Timsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Introsort" title="Introsort">Introsort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spreadsort" title="Spreadsort">Spreadsort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Topological_sorting" title="Topological sorting">Topological sorting</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pre-topological_order" title="Pre-topological order">Pre-topological order</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Pancake_sorting" title="Pancake sorting">Pancake sorting</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spaghetti_sort" title="Spaghetti sort">Spaghetti sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1258
+Cached time: 20171003141834
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.120 seconds
+Real time usage: 0.300 seconds
+Preprocessor visited node count: 624/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 27088/2097152 bytes
+Template argument size: 1179/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+Lua time usage: 0.050/10.000 seconds
+Lua memory usage: 2.61 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  137.325      1 -total
+ 28.73%   39.448      3 Template:Cite_book
+ 25.40%   34.876      1 Template:Infobox_Algorithm
+ 22.97%   31.550      1 Template:Infobox
+ 15.06%   20.681      1 Template:Sorting
+ 13.76%   18.900      1 Template:Navbox
+ 11.57%   15.891      1 Template:Quote
+  9.41%   12.920      1 Template:Comma_separated_entries
+  9.33%   12.810      1 Template:Wikibooks
+  8.19%   11.244      1 Template:Sister_project
+-->
+</div>
+<!-- Saved in parser cache with key enwiki:pcache:idhash:159482-0!canonical!math=5 and timestamp 20171003141834 and revision id 800420791
+ -->
+<noscript>&lt;img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /&gt;</noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;oldid=800420791">https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;oldid=800420791</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Sorting_algorithms" title="Category:Sorting algorithms">Sorting algorithms</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Comparison_sorts" title="Category:Comparison sorts">Comparison sorts</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Stable_sorts" title="Category:Stable sorts">Stable sorts</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de)" title="Category:CS1 German-language sources (de)">CS1 German-language sources (de)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="https://en.wikipedia.org/wiki/Special:MyTalk" title="Discussion about edits from this IP address [alt-shift-n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="https://en.wikipedia.org/wiki/Special:MyContributions" title="A list of edits made from this IP address [alt-shift-y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Cocktail+shaker+sort" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Cocktail+shaker+sort" title="You&#39;re encouraged to log in; however, it&#39;s not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+							<li id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Cocktail_shaker_sort" rel="discussion" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="collapsible selected"><span><a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort">Read</a></span></li>
+							<li id="ca-edit" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=edit" title="Edit this page [alt-shift-e]" accesskey="e">Edit</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<h3 id="p-cactions-label" tabindex="0"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="https://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="https://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="https://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="https://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="https://shop.wikimedia.org/" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="https://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="https://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="https://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="https://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Cocktail_shaker_sort" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Cocktail_shaker_sort" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="https://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="https://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;oldid=800420791" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q847294" title="Link to connected data repository item [alt-shift-g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Cocktail_shaker_sort&amp;id=800420791" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cocktail+shaker+sort">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:ElectronPdf&amp;page=Cocktail+shaker+sort&amp;action=show-selection-screen&amp;coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DCocktail%2Bshaker%2Bsort%26returnto%3DCocktail%2Bshaker%2Bsort%26oldid%3D800420791%26writer%3Drdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span class="uls-settings-trigger" title="Language settings" tabindex="0" role="button" aria-haspopup="true"></span>
+			<h3 id="p-lang-label">Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bubble-sort_bidireccional" title="Bubble-sort bidireccional – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Koktejlov%C3%A9_%C5%99azen%C3%AD" title="Koktejlové řazení – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Shakersort" title="Shakersort – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja_bidireccional" title="Ordenamiento de burbuja bidireccional – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%A8%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%DA%A9%D9%88%DA%A9%D8%AA%D9%84%DB%8C" title="مرتب‌سازی کوکتلی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Tri_cocktail" title="Tri cocktail – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%B9%B5%ED%85%8C%EC%9D%BC_%EC%A0%95%EB%A0%AC" title="칵테일 정렬 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%BF%D5%B8%D5%AF%D5%BF%D5%A5%D5%B5%D5%AC%D5%A1%D5%B5%D5%AB%D5%B6_%D5%BF%D5%A5%D5%BD%D5%A1%D5%AF%D5%A1%D5%BE%D5%B8%D6%80%D5%B8%D6%82%D5%B4" title="Կոկտեյլային տեսակավորում – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Shaker_sort" title="Shaker sort – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%95%D7%9F_%D7%A9%D7%99%D7%99%D7%A7%D7%A8" title="מיון שייקר – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%A1%D2%B1%D1%80%D1%8B%D0%BF%D1%82%D0%B0%D1%83%D0%B4%D1%8B%D2%A3_%D1%88%D0%B5%D0%B9%D0%BA%D0%B5%D1%80%D0%BB%D1%96_%D3%99%D0%B4%D1%96%D1%81%D1%96" title="Сұрыптаудың шейкерлі әдісі – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Kokt%C3%A9lrendez%C3%A9s" title="Koktélrendezés – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%A7%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%BC%E3%83%88" title="シェーカーソート – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Sortowanie_koktajlowe" title="Sortowanie koktajlowe – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Cocktail_sort" title="Cocktail sort – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC" title="Сортировка перемешиванием – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Shaker_sort" title="Shaker sort – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Koktel_sortiranje" title="Koktel sortiranje – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Kokteyl_s%C4%B1ralamas%C4%B1" title="Kokteyl sıralaması – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F_%D0%B7%D0%BC%D1%96%D1%88%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC" title="Сортування змішуванням – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%B8%A1%E5%B0%BE%E9%85%92%E6%8E%92%E5%BA%8F" title="鸡尾酒排序 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>					</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q847294#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 13 September 2017, at 12:47.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="https://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="https://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="https://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="https://en.m.wikipedia.org/w/index.php?title=Cocktail_shaker_sort&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="./Cocktail shaker sort - Wikipedia_files/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="https://www.mediawiki.org/"><img src="./Cocktail shaker sort - Wikipedia_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.120","walltime":"0.300","ppvisitednodes":{"value":624,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":27088,"limit":2097152},"templateargumentsize":{"value":1179,"limit":2097152},"expansiondepth":{"value":11,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  137.325      1 -total"," 28.73%   39.448      3 Template:Cite_book"," 25.40%   34.876      1 Template:Infobox_Algorithm"," 22.97%   31.550      1 Template:Infobox"," 15.06%   20.681      1 Template:Sorting"," 13.76%   18.900      1 Template:Navbox"," 11.57%   15.891      1 Template:Quote","  9.41%   12.920      1 Template:Comma_separated_entries","  9.33%   12.810      1 Template:Wikibooks","  8.19%   11.244      1 Template:Sister_project"]},"scribunto":{"limitreport-timeusage":{"value":"0.050","limit":"10.000"},"limitreport-memusage":{"value":2736557,"limit":52428800}},"cachereport":{"origin":"mw1258","timestamp":"20171003141834","ttl":1900800,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":71,"wgHostname":"mw1214"});});</script>
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div><a accesskey="v" href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort?action=edit" style="display: none;"></a></body></html>

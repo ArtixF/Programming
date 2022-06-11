@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1512107844 source:c:\users\mikem\documents\c++\a4 - averages\averages\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<iterator>
+	<stdio.h>
+	<math.h>
+

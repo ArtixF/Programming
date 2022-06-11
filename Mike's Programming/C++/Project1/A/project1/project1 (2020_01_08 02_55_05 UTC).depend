@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1511488044 source:c:\users\mikem\documents\c++\project1\a\project1\coor.cpp
+	"Coor.h"
+	"Vector.h"
+
+1511489926 c:\users\mikem\documents\c++\project1\a\project1\coor.h
+	"Vector.h"
+
+1511490730 c:\users\mikem\documents\c++\project1\a\project1\vector.h
+
+1511489334 source:c:\users\mikem\documents\c++\project1\a\project1\main.cpp
+	<iostream>
+	"Coor.h"
+	"Vector.h"
+	"Path.h"
+
+1511488577 source:c:\users\mikem\documents\c++\project1\a\project1\path.cpp
+	"Path.h"
+	"vector"
+
+1511491739 c:\users\mikem\documents\c++\project1\a\project1\path.h
+	"Coor.h"
+	<vector>
+
+1511488168 source:c:\users\mikem\documents\c++\project1\a\project1\vector.cpp
+	"Vector.h"
+	<cmath>
+

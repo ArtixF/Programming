@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1513034873 source:c:\users\mikem\documents\c++\a5 - array template\arraytemplate\main.cpp
+	<iostream>
+	" ArrayTemplate.h"
+
+1513030582 source:c:\users\mikem\documents\c++\a5 - array template\arraytemplate\src\ arraytemplate.cpp
+	"iostream"
+
+1513038183 c:\users\mikem\documents\c++\a5 - array template\arraytemplate\include\ arraytemplate.h
+	"iostream"
+
